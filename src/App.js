@@ -1,11 +1,22 @@
+import React from "react";
+import { createGlobalStyle } from "styled-components";
+import TodoHead from "./components/TodoHead";
+import TodoTemplate from "./components/TodoTemplate";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: #e9ecef;
+  }
+`;
+
 function App() {
   return (
-    <div className="App">
-      <form>
-        <input type="text" placeholder="To-do" id="toDo" />
-        <input type="submit" value="추가" />
-      </form>
-    </div>
+    <>
+      <GlobalStyle />
+      <TodoTemplate>
+        <TodoHead />
+      </TodoTemplate>
+    </>
   );
 }
 
